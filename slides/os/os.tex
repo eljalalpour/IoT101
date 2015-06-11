@@ -279,6 +279,96 @@
 
 %------------------------------------------------
 \begin{frame}
+	\frametitle{Comparison}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\hspace{0.9cm}
+			\begin{tabular}{ | c | c | c | c | c |}
+				\hline
+				OS & Min RAW & Min ROM & C Support & C++ Support \\ \hline
+				Contiki & $< 2kB$ & $< 30kB$ & \textcolor{orange}{Partial support} &
+				\textcolor{red}{No support} \\ \hline
+				Tiny OS & $< 1kB$ & $< 4kB$ & \textcolor{red}{No support} &
+				\textcolor{red}{No support} \\ \hline
+				Linux & $\sim 1MB$ & $\sim 1MB$ & \textcolor{green}{Full support} &
+				\textcolor{green}{Full support} \\ \hline
+				RIOT & $\sim 1.5kB$ & $\sim 5kB$ & \textcolor{green}{Full support} &
+				\textcolor{green}{Full support} \\ \hline
+			\end{tabular}
+		\end{column}
+	\end{columns}
+	\vspace{.5cm}
+	\hspace*{1cm}
+	\includegraphics[width=2cm]{figs/contiki-logo.png}
+	\hspace*{.5cm}
+	\includegraphics[width=2cm]{figs/tinyos-logo.jpg}
+	\hspace*{.5cm}
+	\includegraphics[width=2cm]{figs/linux-logo.jpeg}
+	\hspace*{.5cm}
+	\includegraphics[width=2cm]{figs/riot-logo.png}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Comparison}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\hspace{0.9cm}
+			\begin{tabular}{ | c | c | c | c |}
+				\hline
+				OS & Multi-Threading & Modularity & Real-Time \\ \hline
+				Contiki & \textcolor{orange}{Partial support} &
+				\textcolor{orange}{Partial support} &
+				\textcolor{orange}{Partial support} \\ \hline
+				Tiny OS & \textcolor{orange}{Partial support} &
+				\textcolor{red}{No support} &
+				\textcolor{red}{No support} \\ \hline
+				Linux & \textcolor{green}{Full support} &
+				\textcolor{orange}{Partial support} &
+				\textcolor{orange}{Partial support} \\ \hline
+				RIOT & \textcolor{green}{Full support} &
+				\textcolor{green}{Full support} &
+				\textcolor{green}{Full support} \\ \hline
+			\end{tabular}
+		\end{column}
+	\end{columns}
+	\vspace{.5cm}
+	\hspace*{1cm}
+	\includegraphics[width=2cm]{figs/contiki-logo.png}
+	\hspace*{.5cm}
+	\includegraphics[width=2cm]{figs/tinyos-logo.jpg}
+	\hspace*{.5cm}
+	\includegraphics[width=2cm]{figs/linux-logo.jpeg}
+	\hspace*{.5cm}
+	\includegraphics[width=2cm]{figs/riot-logo.png}
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Why Not Linux?}
+	\begin{columns}[c]
+		\begin{column}{12cm}
+			\vspace{1cm}
+			\begin{block}{
+				\centering\textcolor{darkred}{Real-Time Linux}}
+				\justifying
+				Controlling a laser with Linux is crazy, but everyone in this room is crazy
+				in his own way. So if you want to use Linux to control an industrial welding
+				laser, I have no problem with your using PREEMPT\_RT.
+				\vspace{.2cm}
+				\hspace*{9.5cm}\footnotesize{- Linus Torvalds}
+			\end{block}
+		\end{column}
+	\end{columns}
+	\vspace{.5cm}
+	\hspace*{5.5cm}
+	\includegraphics[width=5cm]{figs/linus-torvalds.jpg}
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
 	\vspace{1cm}
 	\begin{Huge}
 		\begin{center}
