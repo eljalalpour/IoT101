@@ -23,6 +23,7 @@
 \definecolor{DarkGray}{RGB}{90,90,90}
 \definecolor{LightGray}{RGB}{150,150,150}
 \definecolor{TextGreen}{RGB}{115,155,15}
+\definecolor{TextOrange}{RGB}{255, 165, 0}
 \definecolor{Ocean}{RGB}{23,142,189}
 \definecolor{BG}{RGB}{215,215,215}
 
@@ -151,14 +152,14 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item FreeRTOS is designed to be \textcolor{orange}{small}
-				and \textcolor{orange}{simple}.
+				\item FreeRTOS is designed to be \textcolor{TextOrange}{small}
+				and \textcolor{TextOrange}{simple}.
 				\item The kernel itself consists of only three or four C files.
 				\item It provides methods for multiple threads or tasks, mutexes,\\
 				semaphores and software timers.
-				\item Key features are \textcolor{green}{very small memory footprint},
-				\textcolor{green}{low overhead},\\
-				and \textcolor{green}{very fast execution}.
+				\item Key features are \textcolor{TextGreen}{very small memory footprint},
+				\textcolor{TextGreen}{low overhead},\\
+				and \textcolor{TextGreen}{very fast execution}.
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -174,8 +175,8 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item RIOT is a \textcolor{orange}{real-time}
-				\textcolor{orange}{multi-threading} operating system.
+				\item RIOT is a \textcolor{TextOrange}{real-time}
+				\textcolor{TextOrange}{multi-threading} operating system.
 				\item RIOT is based on design objectives including:
 				\begin{itemize}
 					\justifying
@@ -203,8 +204,8 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item Contiki is an open source operating system for \textcolor{orange}{networked},\\
-				\textcolor{orange}{memory-constrained} systems
+				\item Contiki is an open source operating system for \textcolor{TextOrange}{networked},\\
+				\textcolor{TextOrange}{memory-constrained} systems
 				\item Contiki provides three network mechanisms:
 				\begin{itemize}
 					\justifying
@@ -228,10 +229,10 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item TinyOS is a \textcolor{orange}{component-based} operating system and platform\\
+				\item TinyOS is a \textcolor{TextOrange}{component-based} operating system and platform\\
 				targeting wireless sensor networks.
-				\item TinyOS is an embedded operating system written in the \textcolor{orange}{nesC}\\
-				\textcolor{orange}{programming language} as a set of cooperating tasks and processes.
+				\item TinyOS is an embedded operating system written in the \textcolor{TextOrange}{nesC}\\
+				\textcolor{TextOrange}{programming language} as a set of cooperating tasks and processes.
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -284,14 +285,14 @@
 			\begin{tabular}{ | c | c | c | c | c |}
 				\hline
 				OS & Min RAW & Min ROM & C Support & C++ Support \\ \hline
-				Contiki & $< 2kB$ & $< 30kB$ & \textcolor{orange}{Partial support} &
+				Contiki & $< 2kB$ & $< 30kB$ & \textcolor{TextOrange}{Partial support} &
 				\textcolor{red}{No support} \\ \hline
 				Tiny OS & $< 1kB$ & $< 4kB$ & \textcolor{red}{No support} &
 				\textcolor{red}{No support} \\ \hline
-				Linux & $\sim 1MB$ & $\sim 1MB$ & \textcolor{green}{Full support} &
-				\textcolor{green}{Full support} \\ \hline
-				RIOT & $\sim 1.5kB$ & $\sim 5kB$ & \textcolor{green}{Full support} &
-				\textcolor{green}{Full support} \\ \hline
+				Linux & $\sim 1MB$ & $\sim 1MB$ & \textcolor{TextGreen}{Full support} &
+				\textcolor{TextGreen}{Full support} \\ \hline
+				RIOT & $\sim 1.5kB$ & $\sim 5kB$ & \textcolor{TextGreen}{Full support} &
+				\textcolor{TextGreen}{Full support} \\ \hline
 			\end{tabular}
 		\end{column}
 	\end{columns}
@@ -315,18 +316,18 @@
 			\begin{tabular}{ | c | c | c | c |}
 				\hline
 				OS & Multi-Threading & Modularity & Real-Time \\ \hline
-				Contiki & \textcolor{orange}{Partial support} &
-				\textcolor{orange}{Partial support} &
-				\textcolor{orange}{Partial support} \\ \hline
-				Tiny OS & \textcolor{orange}{Partial support} &
+				Contiki & \textcolor{TextOrange}{Partial support} &
+				\textcolor{TextOrange}{Partial support} &
+				\textcolor{TextOrange}{Partial support} \\ \hline
+				Tiny OS & \textcolor{TextOrange}{Partial support} &
 				\textcolor{red}{No support} &
 				\textcolor{red}{No support} \\ \hline
-				Linux & \textcolor{green}{Full support} &
-				\textcolor{orange}{Partial support} &
-				\textcolor{orange}{Partial support} \\ \hline
-				RIOT & \textcolor{green}{Full support} &
-				\textcolor{green}{Full support} &
-				\textcolor{green}{Full support} \\ \hline
+				Linux & \textcolor{TextGreen}{Full support} &
+				\textcolor{TextOrange}{Partial support} &
+				\textcolor{TextOrange}{Partial support} \\ \hline
+				RIOT & \textcolor{TextGreen}{Full support} &
+				\textcolor{TextGreen}{Full support} &
+				\textcolor{TextGreen}{Full support} \\ \hline
 			\end{tabular}
 		\end{column}
 	\end{columns}
@@ -452,7 +453,7 @@
 				\justifying
 				\item Can you build an IoT system with familiar Web technologies?
 				\item Yes you can, although the result would not be as \textcolor{Ocean}{efficient} as\\
-				with the \textcolor{green}{newer protocols}.
+				with the \textcolor{TextGreen}{newer protocols}.
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -483,10 +484,10 @@
 			\begin{itemize}
 				\justifying
 				\item IoT device will require a modular operating system that separates\\
-				\textcolor{green}{the core kernel} from
-				\textcolor{orange}{middleware},
-				\textcolor{orange}{protocols},
-				and \textcolor{orange}{applications}.
+				\textcolor{TextGreen}{the core kernel} from
+				\textcolor{TextOrange}{middleware},
+				\textcolor{TextOrange}{protocols},
+				and \textcolor{TextOrange}{applications}.
 			\end{itemize}
 		\end{column}
 	\end{columns}
