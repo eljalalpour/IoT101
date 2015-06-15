@@ -18,6 +18,8 @@
 %----------------------------------------------------------------------------------------
 
 \definecolor{UniBlue}{RGB}{83,121,170}
+\definecolor{Black}{RGB}{125, 125, 125}
+\definecolor{DarkBlue}{RGB}{50, 50, 153}
 \definecolor{DarkGray}{RGB}{90,90,90}
 \definecolor{LightGray}{RGB}{150,150,150}
 \definecolor{TextGreen}{RGB}{115,155,15}
@@ -59,24 +61,24 @@
 }
 
 \defbeamertemplate*{title page}{customized}[1][] {
-  \centering
-  \bigskip
-  \bigskip
-  \bigskip
-  \usebeamercolor[fg]{title}\insertsubtitle\par
-  \usebeamerfont{title}\inserttitle\par
-  \usebeamerfont{subtitle}
-  \bigskip
-  \usebeamercolor[fg]{normal}
-  \usebeamerfont{author}\insertauthor\par
-  \usebeamerfont{institute}\insertinstitute\par
-  \usebeamerfont{date}\insertdate\par
-  \bigskip
-  \bigskip
-  \bigskip
-  \bigskip
-  \bigskip
-  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+	\centering
+	\bigskip
+	\bigskip
+	\bigskip
+	\usebeamercolor[fg]{title}\insertsubtitle\par
+	\usebeamerfont{title}\inserttitle\par
+	\usebeamerfont{subtitle}
+	\bigskip
+	\usebeamercolor[fg]{normal}
+	\usebeamerfont{author}\insertauthor\par
+	\usebeamerfont{institute}\insertinstitute\par
+	\usebeamerfont{date}\insertdate\par
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
 }
 
 %----------------------------------------------------------------------------------------
@@ -383,6 +385,26 @@
 	\end{columns}
 	\vspace{.5cm}
 	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/tux-sad.png}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Close Source Operating Systems for the IoT}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item \textcolor{blue}{\href{https://mbed.org/}{ARM mbed}}
+				\item Huawei LiteOS
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{1cm}
+	\includegraphics[width=2cm]{figs/ARM-mbed-logo.png}
+	\hspace*{1cm}
+	\includegraphics[width=3cm]{figs/huawei-liteos-logo.jpg}
 \end{frame}
 
 %------------------------------------------------
