@@ -497,6 +497,26 @@
 
 %------------------------------------------------
 \begin{frame}
+	\frametitle{Multi-Tasking, Thread Model}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Most RTOS products on the market are thread model.
+				\item Tasks are now called threads.
+				\item All the \textcolor{TextOrange}{tasks} code and data occupy
+				\textcolor{Ocean}{the same address space},\\
+				along with that of the RTOS itself.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{.5cm}
+	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/thread-model.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
 	\vspace{1cm}
 	\begin{Huge}
 		\begin{center}
