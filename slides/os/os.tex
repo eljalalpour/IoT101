@@ -357,6 +357,60 @@
 
 %------------------------------------------------
 \begin{frame}
+	\frametitle{Multi-Tasking, Thread Model (IoT OS)}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Most RTOS products on the market are thread model.
+				\item \textcolor{TextGreen}{Tasks} are now called \textcolor{TextGreen}{threads}.
+				\item All the \textcolor{TextOrange}{tasks} code and data occupy
+				\textcolor{Ocean}{the same address space},\\
+				along with that of the RTOS itself.
+				\item Or every \textcolor{TextOrange}{tasks} can run in its own thread and \\
+				\textcolor{Ocean}{has its own memory stack}.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{.5cm}
+	\hspace*{5.5cm} \includegraphics[width=3.5cm]{figs/thread-model.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{What are the main requirements in IoT OS}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item IoT Protocol Stack Support
+				\item Efficient Memory Managing
+				\item Real-Time Task Scheduling
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{What are the main components in IoT OS}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Networking
+				\item Memory Manager
+				\item Task Scheduler
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
 	\frametitle{Outline}
 	\begin{columns}[c]
 		\begin{column}{30cm}
@@ -1190,22 +1244,23 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Multi-Tasking, Thread Model}
+	\frametitle{Open problems}
 	\begin{columns}[c]
 		\begin{column}{30cm}
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item Most RTOS products on the market are thread model.
-				\item \textcolor{TextGreen}{Tasks} are now called \textcolor{TextGreen}{threads}.
-				\item All the \textcolor{TextOrange}{tasks} code and data occupy
-				\textcolor{Ocean}{the same address space},\\
-				along with that of the RTOS itself.
+				\item Ideally, the capabilities of a full-fledged OS should be available\\
+				on all IoT devices.
+				\item Native Multi-Threading
+				\item Hardware Abstraction
+				\item Dynamic Memory Management
+				\item Fulfill Strict Energy Efficiency
 			\end{itemize}
 		\end{column}
 	\end{columns}
 	\vspace{.5cm}
-	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/thread-model.jpg}
+	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/open-problems.jpg}
 \end{frame}
 
 %------------------------------------------------
