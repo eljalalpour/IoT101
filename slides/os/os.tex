@@ -263,6 +263,80 @@
 
 %------------------------------------------------
 \begin{frame}
+	\frametitle{Memory Requirements}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item As many of typical IoT devices have very little memory \\
+				(typically between 5kB and some hundreds of megabytes),\\
+				the minimum memory requirement of the software has to be very low.
+				\item This concerns RAM as well as persistent program
+				storage.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/RAM.png}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{CPU Requirements}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item The complexity of operations must be kept very low,\\
+				because some of the MCUs in a IoT system will work\\
+				at a very low clock cycle.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/CPU.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Limited Features}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Software for IoT must be able to run on constrained\\
+				hardware without more advanced components like a\\
+				Memory Management Unit (MMU) or a Floating-Point Unit (FPU).
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Features.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Platform Support}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Software for IoT must support a variety of hardware\\
+				platforms, run on constrained platforms, but also\\
+				be able to leverage the capabilities of less constrained platforms.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/hw-platform.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
 	\frametitle{Autonomy}
 	\begin{columns}[c]
 		\begin{column}{30cm}
@@ -276,6 +350,24 @@
 		\end{column}
 	\end{columns}
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Internet-of-Things-3.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Energy efficiency}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item The software must exploit the power saving features\\
+				of the hardware and allow for large sleep
+				cycles as much as possible.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Energy-efficiency.jpg}
 \end{frame}
 
 %------------------------------------------------
