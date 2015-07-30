@@ -115,12 +115,27 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item Introduction
-				\item IoT Requirements \& Challenges
-				\item IoT OS
-				\item Existing OSs
-				\item Protocol stack
-				\item Test \& Development Environments
+				\item Part I: IoT OS
+				\begin{itemize}
+					\item<2-> Introduction
+					\item<2-> IoT Requirements \& Challenges
+					\item<2-> IoT OS
+					\item<2-> Existing OSs				
+				\end{itemize}
+				\item Part II: IoT Protocol Stack
+				\begin{itemize}
+					\item<3-> Traditional Stack
+					\item<3-> IoT Requirements
+					\item<3-> IoT Stack
+					\item<3-> Comparison
+				\end{itemize}
+				\item Part III: IoT Development
+				\begin{itemize}
+					\item<4-> IoT Lab test
+					\item<4-> RIOT environment
+					\item<4-> Compilers
+					\item<4-> Development environment
+				\end{itemize}
 				\item Conclusion
 			\end{itemize}
 		\end{column}
@@ -135,12 +150,15 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item Introduction
-				\item \textcolor{LightGray}{IoT Requirements \& Challenges}
-				\item \textcolor{LightGray}{IoT OS}
-				\item \textcolor{LightGray}{Existing OSs}
-				\item \textcolor{LightGray}{Protocol stack}
-				\item \textcolor{LightGray}{Test \& Development Environments}
+				\item Part I: IoT OS
+				\begin{itemize}
+					\item Introduction
+					\item \textcolor{LightGray}{IoT Requirements \& Challenges}
+					\item \textcolor{LightGray}{IoT OS}
+					\item \textcolor{LightGray}{Existing OSs}
+				\end{itemize}
+				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
+				\item \textcolor{LightGray}{Part III: IoT Development}
 				\item \textcolor{LightGray}{Conclusion}
 			\end{itemize}
 		\end{column}
@@ -149,23 +167,7 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Introduction Outline}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Introduction
-				\begin{itemize}
-					\item What is IoT
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
+	\frametitle{IoT?!!}
 	\begin{columns}
 		\begin{column}{12cm}
 			\begin{block}{\centering\textcolor{darkred}{What is IoT\ldots}}
@@ -192,13 +194,11 @@
 			
 		\end{column}
 	\end{columns}
-	\vspace{.75cm}
-	\hspace*{8.5cm}\includegraphics[width=3cm]{figs/Internet-of-Things-1.jpg}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{What is the IoT}
+	\frametitle{What is the IoT?}
 	\begin{columns}[c]
 		\begin{column}{30cm}
 			\vspace{.1cm}
@@ -231,6 +231,7 @@
 		\item \ldots
 	\end{itemize}
 \end{frame}
+
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Outline}
@@ -239,40 +240,22 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item \textcolor{LightGray}{Introduction}
-				\item IoT Requirements \& Challenges
+				\item Part I: IoT OS
 				\begin{itemize}
-					\item Effect of the requirements on OS
-				\end{itemize}				
-				\item \textcolor{LightGray}{IoT OS}
-				\item \textcolor{LightGray}{Existing OSs}
-				\item \textcolor{LightGray}{Protocol stack}
-				\item \textcolor{LightGray}{Test \& Development Environments}
-				\item \textcolor{LightGray}{Conclusion}
-			\end{itemize}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-<<<<<<< HEAD
-	\frametitle{IoT Requirements}
-	\colorbox{green}{\textcolor{red}{Some items need more explanation}}
-=======
-	\frametitle{IoT Requirements \& Challenges Outline}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item IoT Requirements \& Challenges
-				\begin{itemize}
-					\item Heterogeneous Hardware Constraints
-					\item Autonomy 
-					\item Programmability
-					\item Effect of the requirements on OS
+					\item \textcolor{LightGray}{Introduction}
+					\item IoT Requirements \& Challenges
+					\begin{itemize}
+						\item[-] Heterogeneous Hardware Constraints
+						\item[-] Autonomy 
+						\item[-] Programmability
+						\item[-] Effect of the requirements on OS
+					\end{itemize}
+					\item \textcolor{LightGray}{IoT OS}
+					\item \textcolor{LightGray}{Existing OSs}
 				\end{itemize}
+				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
+				\item \textcolor{LightGray}{Part III: IoT Development}
+				\item \textcolor{LightGray}{Conclusion}
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -373,7 +356,6 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Autonomy}
->>>>>>> 478db6023ac1f2f9171d6f65c0ac3cec65ec5dfc
 	\begin{columns}[c]
 		\begin{column}{30cm}
 			\vspace{.1cm}
@@ -546,32 +528,21 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item \textcolor{LightGray}{Introduction}
-				\item \textcolor{LightGray}{IoT Requirements \& Challenges}
-				\item IoT OS
-				\item \textcolor{LightGray}{Existing OSs}
-				\item \textcolor{LightGray}{Protocol stack}
-				\item \textcolor{LightGray}{Test \& Development Environments}
-				\item \textcolor{LightGray}{Conclusion}
-			\end{itemize}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-	\frametitle{IoT OS Outline}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item IoT OS
+				\item Part I: IoT OS
 				\begin{itemize}
-					\item General OS vs IoT OS
-					\item What are the main requirements in IoT OS
-					\item What are the main components in IoT OS
+					\item \textcolor{LightGray}{Introduction}
+					\item \textcolor{LightGray}{IoT Requirements \& Challenges}
+					\item {IoT OS}
+					\begin{itemize}
+						\item[-] General OS vs IoT OS
+						\item[-] What are the main requirements in IoT OS
+						\item[-] What are the main components in IoT OS
 				\end{itemize}
+					\item \textcolor{LightGray}{Existing OSs}
+				\end{itemize}
+				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
+				\item \textcolor{LightGray}{Part III: IoT Development}
+				\item \textcolor{LightGray}{Conclusion}
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -653,33 +624,22 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item \textcolor{LightGray}{Introduction}
-				\item \textcolor{LightGray}{IoT Requirements \& Challenges}
-				\item \textcolor{LightGray}{IoT OS}
-				\item Existing OSs
-				\item \textcolor{LightGray}{Protocol stack}
-				\item \textcolor{LightGray}{Test \& Development Environments}
-				\item \textcolor{LightGray}{Conclusion}
-			\end{itemize}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-	\frametitle{Existing OSs Outline}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Existing OSs
+				\item Part I: IoT OS
 				\begin{itemize}
-					\item OS Classification
-					\item Overview of Open Source OSs
-					\item Overview of Closed Source OSs
-					\item Why Not Linux?
+					\item \textcolor{LightGray}{Introduction}
+					\item \textcolor{LightGray}{IoT Requirements \& Challenges}
+					\item \textcolor{LightGray}{IoT OS}
+					\item {Existing OSs}
+					\begin{itemize}
+						\item[-] OS Classification
+						\item[-] Overview of Open Source OSs
+						\item[-] Overview of Closed Source OSs
+						\item[-] Why Not Linux?
+					\end{itemize}
 				\end{itemize}
+				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
+				\item \textcolor{LightGray}{Part III: IoT Development}
+				\item \textcolor{LightGray}{Conclusion}
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -1109,33 +1069,16 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item \textcolor{LightGray}{Introduction}
-				\item \textcolor{LightGray}{IoT Requirements \& Challenges}
-				\item \textcolor{LightGray}{IoT OS}
-				\item \textcolor{LightGray}{Existing OSs}
-				\item Protocol stack
-				\item \textcolor{LightGray}{Test \& Development Environments}
-				\item \textcolor{LightGray}{Conclusion}
-			\end{itemize}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-	\frametitle{Protocol stack Outline}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Protocol stack
+				\item \textcolor{LightGray}{Part I: IoT OS}
+				\item Part II: IoT Protocol Stack
 				\begin{itemize}
 					\item Traditional Stack
 					\item IoT Requirements
 					\item IoT Stack
 					\item Comparison
 				\end{itemize}
+				\item \textcolor{LightGray}{Part III: IoT Development}
+				\item \textcolor{LightGray}{Conclusion}
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -1243,7 +1186,6 @@
 	\vspace{.5cm}
 	\hspace*{.5cm} \includegraphics[width=12cm]{figs/Web-and-IoT-Stacks-2.png}
 \end{frame}
-
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Outline}
@@ -1252,33 +1194,16 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item \textcolor{LightGray}{Introduction}
-				\item \textcolor{LightGray}{IoT Requirements \& Challenges}
-				\item \textcolor{LightGray}{IoT OS}
-				\item \textcolor{LightGray}{Existing OSs}
-				\item \textcolor{LightGray}{Protocol stack}
-				\item Test \& Development Environments
-				\item \textcolor{LightGray}{Conclusion}
-			\end{itemize}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-	\frametitle{Test \& Development Environments Outline}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Test \& Development Environments
+				\item \textcolor{LightGray}{Part I: IoT OS}
+				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
+				\item Part III: IoT Development
 				\begin{itemize}
 					\item IoT Lab test
 					\item RIOT environment
 					\item Compilers
 					\item Development environment
 				\end{itemize}
+				\item \textcolor{LightGray}{Conclusion}
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -1449,31 +1374,14 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item \textcolor{LightGray}{Introduction}
-				\item \textcolor{LightGray}{IoT Requirements \& Challenges}
-				\item \textcolor{LightGray}{IoT OS}
-				\item \textcolor{LightGray}{Existing OSs}
-				\item \textcolor{LightGray}{Protocol stack}
-				\item \textcolor{LightGray}{Test \& Development Environments}
-				\item Conclusion
-			\end{itemize}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\begin{frame}
-	\frametitle{Conclusion Outline}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
+				\item \textcolor{LightGray}{Part I: IoT OS}
+				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
+				\item \textcolor{LightGray}{Part III: IoT Development}
 				\item Conclusion
 				\begin{itemize}
 					\item Open problems
 					\item Event-Driven, Non-Blocking I/O Model
-				\end{itemize}
+				\end{itemize}				
 			\end{itemize}
 		\end{column}
 	\end{columns}
