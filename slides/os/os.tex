@@ -256,24 +256,244 @@
 
 %------------------------------------------------
 \begin{frame}
+<<<<<<< HEAD
 	\frametitle{IoT Requirements}
 	\colorbox{green}{\textcolor{red}{Some items need more explanation}}
+=======
+	\frametitle{IoT Requirements \& Challenges Outline}
 	\begin{columns}[c]
 		\begin{column}{30cm}
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item Scalability
-				\item Modularity
-				\item Connectivity
-				\item Reliability
-				\item Real-time behavior
-				\item Run on a wide spectrum of hardware
-				\item Holistic Security
+				\item IoT Requirements \& Challenges
+				\begin{itemize}
+					\item Heterogeneous Hardware Constraints
+					\item Autonomy 
+					\item Programmability
+					\item Effect of the requirements on OS
+				\end{itemize}
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Heterogeneous Hardware Constraints}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Memory Requirements
+				\item CPU Requirements
+				\item Limited Features
+				\item Platform Support
 			\end{itemize}
 		\end{column}
 	\end{columns}
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Internet-of-Things-3.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Memory Requirements}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item As many of typical IoT devices have very little memory \\
+				(typically between 5kB and some hundreds of megabytes),\\
+				the minimum memory requirement of the software has to be very low.
+				\item This concerns RAM as well as persistent program
+				storage.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/RAM.png}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{CPU Requirements}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item The complexity of operations must be kept very low,\\
+				because some of the MCUs in a IoT system will work\\
+				at a very low clock cycle.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/CPU.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Limited Features}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Software for IoT must be able to run on constrained\\
+				hardware without more advanced components like a\\
+				Memory Management Unit (MMU) or a Floating-Point Unit (FPU).
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Features.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Platform Support}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Software for IoT must support a variety of hardware\\
+				platforms, run on constrained platforms, but also\\
+				be able to leverage the capabilities of less constrained platforms.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/hw-platform.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Autonomy}
+>>>>>>> 478db6023ac1f2f9171d6f65c0ac3cec65ec5dfc
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Energy efficiency
+				\item Adaptive Network Stack
+				\item Reliability
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Internet-of-Things-3.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Energy efficiency}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item The software must exploit the power saving features\\
+				of the hardware and allow for large sleep
+				cycles as much as possible.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Energy-efficiency.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Adaptive Network Stack}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item The network stack should provide full-fledged TCP/IP\\
+				implementations as well as a 6LoWPAN stack aiming\\
+				for more constrained devices.
+				\item It should also be modular in a way that the protocols\\
+				at each layer can be easily replaced. 
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{3cm} \includegraphics[width=9cm]{figs/tcp-ip-stack.png}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Reliability}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item IoT systems are often deployed in critical applications\\
+				in which physical access is difficult and related to high costs\\
+				in many cases. For that reason, it is important that the system\\
+				is robust and thus that the operating system runs very reliably.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/reliability.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Programmability}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Standard API
+				\item Standard Programming Languages
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Internet-of-Things-3.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Standard API}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item In order to ease software development and simplify\\
+				the porting of existing software, a standard programming interface\\
+				such as POSIX or STL should be provided.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/ieee-posix-certified.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Standard Programming Languages}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Support for standard high level programming languages,\\
+				such as C++, is vital.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{1cm}
+	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/C.png}
 \end{frame}
 
 %------------------------------------------------
