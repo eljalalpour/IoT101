@@ -85,7 +85,7 @@
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
-\title[Operating Systems of the IoT]{An Introduction to the Operating Systems of the IoT}
+\title[Operating Systems of the IoT]{An Introduction to IoT Operating Systems}
 \author{IoT Lab @ AUT: OS Team}
 \institute[] {
   Amirkabir University of Technology \\
@@ -94,7 +94,7 @@
   {\small\tt parham.alvani@gmail.com}
   \medskip
 }
-\date{Jun 29, 2015}
+\date{\today}
 \titlegraphic{\hspace*{5cm}\includegraphics[width=2cm]{figs/aut_logo.jpeg}}
 
 \begin{document}
@@ -172,7 +172,7 @@
 		\begin{column}{12cm}
 			\begin{block}{\centering\textcolor{darkred}{What is IoT\ldots}}
 				\justifying
-				[Wikipedia]: The network of physical objects or "things" embedded with electronics, 	
+				[Wikipedia]: The network of physical objects or ``things" embedded with electronics, 	
 				software, sensors, and connectivity to enable objects to exchange data with the
 				manufacturer, operator and/or other connected devices based on the infrastructure of
 				ITU's Global Standards Initiative
@@ -199,20 +199,12 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{What is the IoT?}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item A \textcolor{TextGreen}{thing} in IoT can be any natural or man-made\\
-				object can be assigned \textcolor{TextGreen}{IP(v6) address}.
-				\item So far, the Internet of Things has been most closely associated with\\
-				machine-to-machine (M2M) communication.
-				\item Although the concept wasn't named until 1999, the Internet of Things\\
-				has been in development for decades.
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\begin{itemize}
+		\justifying
+		\item A \textcolor{TextGreen}{thing} in IoT can be any natural or man-made object can be assigned \textcolor{TextGreen}{IP(v6) address}.
+		\item So far, the Internet of Things has been most closely associated with machine-to-machine (M2M) communication.
+		\item Although the concept wasn't named until 1999, the Internet of Things has been in development for decades.
+		\end{itemize}
 	\vspace{.5cm}
 	\hspace*{7cm}\includegraphics[width=4cm]{figs/Internet-of-Things-4.jpg}
 \end{frame}
@@ -245,9 +237,9 @@
 					\item \textcolor{LightGray}{Introduction}
 					\item IoT Requirements \& Challenges
 					\begin{itemize}
-						\item[-] Heterogeneous Hardware Constraints
-						\item[-] Autonomy 
-						\item[-] Programmability
+						\item[-] R1: Heterogeneous Hardware Constraints
+						\item[-] R2: Autonomy 
+						\item[-] R3: Programmability
 						\item[-] Effect of the requirements on OS
 					\end{itemize}
 					\item \textcolor{LightGray}{IoT OS}
@@ -263,99 +255,116 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Heterogeneous Hardware Constraints}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Memory Requirements
-				\item CPU Requirements
-				\item Limited Features
-				\item Platform Support
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\frametitle{R1: Heterogeneous Hardware Constraints}
+	\begin{itemize}
+		\justifying
+		\item Memory Requirements
+		\item CPU Requirements
+		\item Limited Features
+		\item Platform Support
+	\end{itemize}
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Internet-of-Things-3.jpg}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Memory Requirements}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item As many of typical IoT devices have very little memory \\
-				(typically between 5kB and some hundreds of megabytes),\\
-				the minimum memory requirement of the software has to be very low.
-				\item This concerns RAM as well as persistent program
-				storage.
-			\end{itemize}
-		\end{column}
+	\begin{itemize}
+		\justifying
+		\item Many of typical IoT devices have very little memory (typically between 5kB and some hundreds of megabytes)
+		\item This concerns RAM as well as persistent program storage.
+	\end{itemize}
+
+	\begin{columns}
+	\column{.8\textwidth}
+	\begin{block}{\centering\textcolor{darkred}{Effects on OS}}
+		\justifying
+		\begin{itemize}
+			\item Kernel image should be very small
+			\item The RAM footprint should be very low
+			\item The OS should be modular!
+		\end{itemize}
+	\end{block}
 	\end{columns}
-	\vspace{1cm}
+
+	\vspace{0.5cm}
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/RAM.png}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
 	\frametitle{CPU Requirements}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item The complexity of operations must be kept very low,\\
-				because some of the MCUs in a IoT system will work\\
-				at a very low clock cycle.
-			\end{itemize}
-		\end{column}
+	\begin{itemize}
+		\justifying
+		\item Some of the IoT systems are MCU based (instead of CPU)
+		\item Some of the MCUs/CPUs in a IoT system will work at a very low clock cycle.
+	\end{itemize}
+
+	\begin{columns}
+	\column{.8\textwidth}
+	\begin{block}{\centering\textcolor{darkred}{Effects on OS}}
+		\justifying
+		\begin{itemize}
+			\item The complexity of OS must be kept very low
+			\item Should be scalable, to accommodate a wide range of different classes of devices
+		\end{itemize}
+	\end{block}
 	\end{columns}
-	\vspace{1cm}
+	
+	\vspace{0.5cm}
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/CPU.jpg}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Limited Features}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Software for IoT must be able to run on constrained\\
-				hardware without more advanced components like a\\
-				Memory Management Unit (MMU) or a Floating-Point Unit (FPU).
-			\end{itemize}
-		\end{column}
+	\begin{itemize}
+		\justifying
+		\item IoT's hardware may have not advanced components like a Memory Management Unit (MMU) or a Floating-Point Unit (FPU).
+	\end{itemize}
+
+	\begin{columns}
+	\column{.8\textwidth}
+	\begin{block}{\centering\textcolor{darkred}{Effects on OS}}
+		\justifying
+		\begin{itemize}
+			\item Software for IoT must be able to run on constrained HW
+			\item Should be scalable, to accommodate a wide range of different classes of devices
+		\end{itemize}
+	\end{block}
 	\end{columns}
-	\vspace{1cm}
+		
+	\vspace{0.5cm}
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Features.jpg}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Platform Support}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Software for IoT must support a variety of hardware\\
-				platforms, run on constrained platforms, but also\\
-				be able to leverage the capabilities of less constrained platforms.
-			\end{itemize}
-		\end{column}
+	\begin{itemize}
+		\justifying
+		\item IoT platforms may have very limitted resources; e.g., battery, IO, storage, ...
+		\item IoT platforms may composed of widly different components
+	\end{itemize}
+
+	\begin{columns}
+	\column{.8\textwidth}
+	\begin{block}{\centering\textcolor{darkred}{Effects on OS}}
+		\justifying
+		\begin{itemize}
+			\item Must be able to leverage the capabilities of less constrained platforms
+			\item Should be scalable, to accommodate a wide range of different classes of devices
+		\end{itemize}
+	\end{block}
 	\end{columns}
-	\vspace{1cm}
+
+	\vspace{0.5cm}
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/hw-platform.jpg}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Autonomy}
+	\frametitle{R2: Autonomy}
 	\begin{columns}[c]
 		\begin{column}{30cm}
 			\vspace{.1cm}
@@ -429,7 +438,7 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Programmability}
+	\frametitle{R3: Programmability}
 	\begin{columns}[c]
 		\begin{column}{30cm}
 			\vspace{.1cm}
