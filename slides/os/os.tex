@@ -569,68 +569,56 @@
 \begin{frame}
 	\frametitle{General OS}
 	\vspace{.5cm}
-	\hspace*{1.5cm} \includegraphics[width=10cm]{figs/os-components.jpg}
+	\begin{center}
+	\includegraphics[width=10cm]{figs/os-components.jpg}
+	\end{center}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{IoT OS}
-	\vspace{.5cm}
-	\hspace*{1cm} \includegraphics[width=10cm]{figs/mbed-components.png}
+	\frametitle{Linux Kernel Architecture (Simple Version)}
+	\begin{center}
+	\includegraphics[width=10cm]{figs/Simple_Linux_kernel_diagram.png}	
+	\end{center}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Multi-Tasking, Thread Model (IoT OS)}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Most RTOS products on the market are thread model.
-				\item \textcolor{TextGreen}{Tasks} are now called \textcolor{TextGreen}{threads}.
-				\item All the \textcolor{TextOrange}{tasks} code and data occupy
-				\textcolor{Ocean}{the same address space},\\
-				along with that of the RTOS itself.
-				\item Or every \textcolor{TextOrange}{tasks} can run in its own thread and \\
-				\textcolor{Ocean}{has its own memory stack}.
-			\end{itemize}
-		\end{column}
-	\end{columns}
-	\vspace{.5cm}
-	\hspace*{5.5cm} \includegraphics[width=3.5cm]{figs/thread-model.jpg}
+	\frametitle{Linux Kernel Architecture (Almost Complete Version)}
+	\begin{center}
+	\includegraphics[width=10cm]{figs/Complex_Linux_kernel_map.png}	
+	\end{center}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{What are the main requirements in IoT OS}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item IoT Protocol Stack Support
-				\item Efficient Memory Managing
-				\item Real-Time Task Scheduling
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\frametitle{IoT OS/Kernel}
+	\begin{itemize}
+		\item Much more simpler than general OS/Kernel
+		\item Do we need?!
+		\begin{itemize}
+			\item Human interface
+			\item Full wide-range storage support
+			\item Virtual memory
+			\item Full traditional protocol stack 
+		\end{itemize}
+		\item Its own requirements, remarkably
+		\begin{itemize}
+			\justifying
+			\item IoT Protocol Stack Support
+			\item Low Complexity
+			\item Efficient Memory Managing
+			\item Real-Time Task Scheduling
+		\end{itemize}			
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{What are the main components in IoT OS}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Networking
-				\item Memory Manager
-				\item Task Scheduler
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\frametitle{IoT OS Example: ARM's mbed}
+	\begin{center}
+	\includegraphics[width=10cm]{figs/mbed-components.png}	
+	\end{center}
 \end{frame}
 
 %------------------------------------------------
@@ -665,41 +653,31 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{OS Classification}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
+	\begin{itemize}
+		\justifying
+		\item Single-tasking vs. Multi-tasking
 			\begin{itemize}
-				\justifying
-				\item Design Aspects for an IoT OS
-				\begin{itemize}
-					\item Monolithic fashion
-					\item Layered approach
-					\item Microkernel architecture
-				\end{itemize}
+				\item<2-> Multi-tasking in IoT OS
 			\end{itemize}
-		\end{column}
-	\end{columns}
+		\item Single-user vs. Multi-user
+			\begin{itemize}
+				\item<2-> Single-user in IoT OS
+			\end{itemize}		
+		\item Monolithic vs. Microkernel
+			\begin{itemize}
+				\item<2-> Both can be used in IoT OS
+			\end{itemize}		
+		\item Process model vs. Thread model
+			\begin{itemize}
+				\item<2-> Thread in IoT OS, since No MMU \& Realtimeness
+			\end{itemize}					
+		\item Open source vs. Commercial
+			\begin{itemize}
+				\item<2-> Both are available in IoT OS market
+			\end{itemize}				
+	\end{itemize}
 \end{frame}
 
-%------------------------------------------------
-\begin{frame}
-	\frametitle{OS Classification}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Programming Model for an IoT OS
-				\begin{itemize}
-					\item All tasks are executed within the same context and have\\
-					no segmentation of the memory address space.
-					\item Every process can run in its own thread and has its own\\
-					memory stack.
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-	\end{columns}
-\end{frame}
 
 %------------------------------------------------
 \begin{frame}
@@ -1023,6 +1001,9 @@
 				\item Brillo is \textcolor{TextGreen}{derived} from Android
 				but \textcolor{TextGreen}{polished} to just the lower levels.
 				\item It supports Wi-Fi, Bluetooth Low Energy, and other Android things.
+				\begin{itemize}
+					\item Moreover, it will support the ``Weave" protocol
+				\end{itemize}
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -1450,6 +1431,75 @@
 			\usebeamercolor[fg]{title}Questions?
 		\end{center}
 	\end{Huge}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Multi-Tasking, Thread Model (IoT OS)}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Most RTOS products on the market are thread model.
+				\item \textcolor{TextGreen}{Tasks} are now called \textcolor{TextGreen}{threads}.
+				\item All the \textcolor{TextOrange}{tasks} code and data occupy
+				\textcolor{Ocean}{the same address space},\\
+				along with that of the RTOS itself.
+				\item Or every \textcolor{TextOrange}{tasks} can run in its own thread and \\
+				\textcolor{Ocean}{has its own memory stack}.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{.5cm}
+	\hspace*{5.5cm} \includegraphics[width=3.5cm]{figs/thread-model.jpg}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Multi-Tasking, Process Model (IoT OS)}
+	\begin{itemize}
+		\justifying
+		\item By using the MMU, each task (now called a process) occupies its own private address space
+		\item This model has the great benefit that each process has no access to, or even awareness of, other processes’ memory or that of the OS itself
+		\item The memory needs to be remapped using the MMU
+	\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{What are the main components in IoT OS}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Networking
+				\item Memory Manager
+				\item Task Scheduler
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{OS Classification}
+	\begin{columns}[c]
+		\begin{column}{30cm}
+			\vspace{.1cm}
+			\begin{itemize}
+				\justifying
+				\item Programming Model for an IoT OS
+				\begin{itemize}
+					\item All tasks are executed within the same context and have\\
+					no segmentation of the memory address space.
+					\item Every process can run in its own thread and has its own\\
+					memory stack.
+				\end{itemize}
+			\end{itemize}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \end{document}
