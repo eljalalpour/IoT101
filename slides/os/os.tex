@@ -381,57 +381,75 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Energy efficiency}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item The software must exploit the power saving features\\
-				of the hardware and allow for large sleep
-				cycles as much as possible.
-			\end{itemize}
-		\end{column}
+	\begin{itemize}
+		\justifying
+		\item Some IoT nodes are battery powered
+		\item Energy efficiency is one the goals of IoT
+	\end{itemize}
+
+	\begin{columns}
+	\column{.8\textwidth}
+	\begin{block}{\centering\textcolor{darkred}{Effects on OS}}
+		\justifying
+		\begin{itemize}
+			\item Must exploit the power saving features of the hardware and allow for large sleep
+				cycles as much as possible
+		\end{itemize}
+	\end{block}
 	\end{columns}
-	\vspace{1cm}
+	\vspace{0.5cm}
+	
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/Energy-efficiency.jpg}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Adaptive Network Stack}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item The network stack should provide full-fledged TCP/IP\\
-				implementations as well as a 6LoWPAN stack aiming\\
-				for more constrained devices.
-				\item It should also be modular in a way that the protocols\\
-				at each layer can be easily replaced. 
-			\end{itemize}
-		\end{column}
+
+	\begin{itemize}
+		\justifying
+		\item Connectivity is an ingredients part of IoT
+		\item IoT is a part of Inernet, TCP/IP based network
+		\item IoT can also use its own special protocols 
+	\end{itemize}
+
+	\begin{columns}
+	\column{.8\textwidth}
+	\begin{block}{\centering\textcolor{darkred}{Effects on OS}}
+		\justifying
+		\begin{itemize}
+			\item Should provide full-fledged TCP/IP implementations as well as a 6LoWPAN stack aiming for more constrained devices.
+			\item It should also be modular in a way that the protocols at each layer can be easily replaced. 
+		\end{itemize}
+	\end{block}
 	\end{columns}
-	\vspace{1cm}
-	\hspace*{3cm} \includegraphics[width=9cm]{figs/tcp-ip-stack.png}
+	\vspace{0.5cm}
+	
+%	\hspace*{3cm} \includegraphics[width=9cm]{figs/tcp-ip-stack.png}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Reliability}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item IoT systems are often deployed in critical applications\\
-				in which physical access is difficult and related to high costs\\
-				in many cases. For that reason, it is important that the system\\
-				is robust and thus that the operating system runs very reliably.
-			\end{itemize}
-		\end{column}
+
+	\begin{itemize}
+		\justifying
+		\item IoT systems are often deployed in critical applications in which physical access is difficult and related to high costs
+		\item Timely response is critical in some applications 
+	\end{itemize}
+
+	\begin{columns}
+	\column{.8\textwidth}
+	\begin{block}{\centering\textcolor{darkred}{Effects on OS}}
+		\justifying
+		\begin{itemize}
+			\item System must be robust and thus that the operating system should run very reliably
+			\item Real-Time OS in some applications
+		\end{itemize}
+	\end{block}
 	\end{columns}
-	\vspace{1cm}
+	\vspace{0.5cm}
+		
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/reliability.jpg}
 \end{frame}
 
@@ -453,39 +471,30 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Standard API}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item In order to ease software development and simplify\\
-				the porting of existing software, a standard programming interface\\
-				such as POSIX or STL should be provided.
-			\end{itemize}
-		\end{column}
+	\frametitle{Standard API \& Programming Languages}
+
+	\begin{itemize}
+		\justifying
+		\item Need for SW development for IoT systems
+		\item Porting of existing software on IoT systems
+	\end{itemize}
+
+	\begin{columns}
+	\column{.8\textwidth}
+	\begin{block}{\centering\textcolor{darkred}{Effects on OS}}
+		\justifying
+		\begin{itemize}
+			\item Standard programming interface such as POSIX or STL should be provided
+			\item Support for standard high level programming languages, e.g., C \& C++, is vital.			
+		\end{itemize}
+	\end{block}
 	\end{columns}
-	\vspace{1cm}
+	\vspace{0.5cm}
+
 	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/ieee-posix-certified.jpg}
 \end{frame}
 
-%------------------------------------------------
-\begin{frame}
-	\frametitle{Standard Programming Languages}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Support for standard high level programming languages,\\
-				such as C++, is vital.
-			\end{itemize}
-		\end{column}
-	\end{columns}
-	\vspace{1cm}
-	\hspace*{7cm} \includegraphics[width=3.5cm]{figs/C.png}
-\end{frame}
-
+\iffalse
 %------------------------------------------------
 \begin{frame}
 	\frametitle{IoT Challenges}
@@ -527,7 +536,7 @@
 		\end{column}
 	\end{columns}
 \end{frame}
-
+\fi
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Outline}
