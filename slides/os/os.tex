@@ -1311,45 +1311,49 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Compilers}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Family: ARM
-				\begin{itemize}
-					\item gcc-arm-embedded toolchain
-					\item CodeBench toolchain
-					\item Linaro toolchain
-				\end{itemize}
-				\item Family: ATmega
-				\begin{itemize}
-					\item Atmel AVR Toolchain
-				\end{itemize}
-				\item Family: MSP430
-				\begin{itemize}
-					\item MSPGCC toolchain
-				\end{itemize}
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\vspace{.1cm}
+	\begin{itemize}
+		\justifying
+		\item Family: ARM
+		\begin{itemize}
+			\item gcc-arm-embedded toolchain
+			\item CodeBench toolchain
+			\item Linaro toolchain
+		\end{itemize}
+		\item Family: ATmega
+		\begin{itemize}
+			\item Atmel AVR Toolchain
+		\end{itemize}
+		\item Family: MSP430
+		\begin{itemize}
+			\item MSPGCC toolchain
+		\end{itemize}
+	\end{itemize}
 	\vspace{.5cm}
 	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/parse-tree.png}
 \end{frame}
 
 %------------------------------------------------
 \begin{frame}
+	\frametitle{ARM: gcc-arm-embedded toolchain}
+	\vspace{.1cm}
+		\begin{itemize}
+			\justifying
+			\item ARM is maintaining a GNU toolchain with a GCC source branch targeted at Embedded ARM Processors, namely Cortex-R/Cortex-M processor families	
+		\end{itemize}
+	\vspace{.5cm}
+	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/CompilerAssemblerToolchain_gcc.png}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
 	\frametitle{Development environment}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item Most of the IoT OS developed on \textcolor{TextOrange}{Linux} and\\
-				use \textcolor{TextGreen}{traditional make} as build system.
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\vspace{.1cm}
+	\begin{itemize}
+		\justifying
+		\item Most of the IoT OS developed on \textcolor{TextOrange}{Linux} and\\
+		use \textcolor{TextGreen}{traditional make} as build system.
+	\end{itemize}
 	\vspace{.5cm}
 	\hspace*{.5cm}
 	\includegraphics[width=5cm]{figs/linux-logo.jpeg}
