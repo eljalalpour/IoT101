@@ -131,7 +131,7 @@
 				\end{itemize}
 				\item Part III: IoT Development
 				\begin{itemize}
-					\item<4-> IoT Lab test
+					\item<4-> The ``IoT-Lab''
 					\item<4-> RIOT environment
 					\item<4-> Compilers
 					\item<4-> Development environment
@@ -218,7 +218,7 @@
 		\item Manufacturing
 		\item Energy management
 		\item Medical and healthcare systems
-		\item \textbf{Building and home automation}
+		\item \textcolor{TextGreen}{\textbf{Building and home automation}}
 		\item Transportation
 		\item \ldots
 	\end{itemize}
@@ -375,7 +375,7 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item Energy efficiency
+				\item Energy Efficiency
 				\item Adaptive Network Stack
 				\item Reliability
 			\end{itemize}
@@ -386,7 +386,7 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Energy efficiency}
+	\frametitle{Energy Efficiency}
 	\begin{itemize}
 		\justifying
 		\item Some IoT nodes are battery powered
@@ -424,7 +424,8 @@
 	\begin{block}{\centering\textcolor{darkred}{Effects on OS}}
 		\justifying
 		\begin{itemize}
-			\item Should provide full-fledged TCP/IP implementations as well as a 6LoWPAN stack aiming for more constrained devices.
+			\item Should provide full-fledged TCP/IP implementations 
+			\item As well as a 6LoWPAN stack aiming for more constrained devices.
 			\item It should also be modular in a way that the protocols at each layer can be easily replaced. 
 		\end{itemize}
 	\end{block}
@@ -709,22 +710,17 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{FreeRTOS}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item FreeRTOS is designed to be \textcolor{TextOrange}{small}
-				and \textcolor{TextOrange}{simple}.
-				\item The kernel itself consists of only three or four C files.
-				\item It provides methods for multiple threads or tasks, mutexes,\\
-				semaphores and software timers.
-				\item Key features are \textcolor{TextGreen}{very small memory footprint},
-				\textcolor{TextGreen}{low overhead},\\
-				and \textcolor{TextGreen}{very fast execution}.
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\begin{itemize}
+		\justifying
+		\item FreeRTOS is designed to be \textcolor{TextOrange}{small}
+		and \textcolor{TextOrange}{simple}.
+		\item It claims that is market leading RTOS
+		\item The kernel itself consists of only three or four C files.
+		\item It provides methods for multiple threads or tasks, mutexes, semaphores and software timers.
+		\item Key features are \textcolor{TextGreen}{very small memory footprint},
+		\textcolor{TextGreen}{low overhead}, and \textcolor{TextGreen}{very fast execution}.
+	\end{itemize}
+
 	\vspace{.5cm}
 	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/freertos-logo.jpg}	
 \end{frame}
@@ -832,11 +828,18 @@
 				\item The goal of the OpenWSN project is to provide open-source\\
 				implementations of a complete protocol stack based on Internet of\\
 				Things standards, on a variety of software and hardware platforms.
+				\item Under-development protocols
+				\begin{itemize}
+					\item IEEE802.15.4e
+					\item IETF 6TiSCH 
+					\item IETF 6LoWPAN
+					\item IETF ROLL
+				\end{itemize}
 			\end{itemize}
 		\end{column}
 	\end{columns}
 	\vspace{.5cm}
-	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/openwsn-logo.png}
+	\hspace*{5.5cm} \includegraphics[width=4cm]{figs/openwsn-logo.png}
 \end{frame}
 
 %------------------------------------------------
@@ -981,17 +984,11 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Huawei LiteOS}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item The company says that its \textcolor{TextOrange}{LiteOS} is
-				the \textcolor{TextGreen}{lightest} software of\\
-				its kind and can be used to power a range of smart devices
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\begin{itemize}
+		\justifying
+		\item The company says that its \textcolor{TextOrange}{LiteOS} is the \textcolor{TextGreen}{lightest} software of its kind and can be used to power a range of smart devices
+		\item There is another open-source ``LiteOS" project (UNIX-like OS for WSN). The relation between this \& that is not known.
+		\end{itemize}
 	\vspace{.5cm}
 	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/huawei-liteos-logo.jpg}
 \end{frame}
@@ -1188,7 +1185,7 @@
 				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
 				\item Part III: IoT Development
 				\begin{itemize}
-					\item IoT Lab test
+					\item The ``IoT-Lab" 
 					\item RIOT environment
 					\item Compilers
 					\item Development environment
@@ -1201,23 +1198,27 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{IoT Lab test}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item A scientific testbed
-				\item Different topologies and environments
-				\item Different nodes
-				\item A part of FIT
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\frametitle{The ``IoT-Lab"}
+	\begin{itemize}
+		\justifying
+		\item IoT-LAB provides a very large scale infrastructure suitable for testing small wireless sensor devices and heterogeneous communicating objects
+		\item IoT-LAB provides full control of network nodes and direct access to the gateways to which nodes are connected, allowing researchers to monitor nodes energy consumption and network-related metrics.
+	\end{itemize}
 	\vspace{.5cm}
-	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/fit-iot-lab.jpg}
+	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/iot-lab-1.png}
 \end{frame}
 
+%------------------------------------------------
+\begin{frame}
+	\frametitle{The ``IoT-Lab"}
+	\begin{center}
+	\includegraphics[width=6cm]{figs/IoTLab-platform-overview.jpg}	
+	\end{center}
+
+\end{frame}
+%------------------------------------------------
+
+\iffalse
 %------------------------------------------------
 \begin{frame}
 	\frametitle{A scientific testbed}
@@ -1235,10 +1236,10 @@
 	\vspace{.5cm}
 	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/iot-lab-1.png}
 \end{frame}
-
+\fi
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Different topologies and environments}
+	\frametitle{The ``IoT-Lab" topologies and environments}
 	\begin{columns}[c]
 		\begin{column}{30cm}
 			\vspace{.1cm}
@@ -1250,7 +1251,17 @@
 		\end{column}
 	\end{columns}
 	\vspace{.5cm}
-	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/iot-lab-2.png}
+	
+	\begin{itemize}
+		\item 512 WSN430 Node (800MhZ)
+		\item 632 WSN430 Node (2.4GhZ)
+		\item 938 M3 Node
+		\item 550 A8 Node
+		\item 96 Open Host Node		
+	\end{itemize}	
+	
+	%\includegraphics[width=5cm]{figs/iot-lab-2.png}	
+
 \end{frame}
 
 %------------------------------------------------
@@ -1265,6 +1276,11 @@
 				\item A global networking backbone provides power and connectivity to\\
 				all IoT-LAB nodes and guaranties the out of band signal network\\
 				needed for command purposes and monitoring feedback.
+				\item Nodes' Operating Systems
+				\begin{itemize}
+					\item Contiki
+					\item RIOT
+				\end{itemize}
 			\end{itemize}
 		\end{column}
 	\end{columns}
@@ -1373,13 +1389,29 @@
 				\item \textcolor{LightGray}{Part III: IoT Development}
 				\item Conclusion
 				\begin{itemize}
+					\item Summary
 					\item Open problems
-					\item Event-Driven, Non-Blocking I/O Model
+					%\item Event-Driven, Non-Blocking I/O Model
 				\end{itemize}				
 			\end{itemize}
 		\end{column}
 	\end{columns}
 \end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Summary}
+	\begin{itemize}
+		\justifying
+		\item Different applications of IoT $\Rightarrow$ Different OS Requirements (e.g., Energy, Memory, Realtime, ...) $\Rightarrow$ Different OSs
+		\item A few OSs should be examined
+		\item In the next step, we want to develop an evaluation environment and focus on RIOT 
+		\begin{itemize}
+			\item We have already enough experience on Linux 
+		\end{itemize}
+		\end{itemize}
+\end{frame}
+
 
 %------------------------------------------------
 \begin{frame}
@@ -1389,8 +1421,7 @@
 			\vspace{.1cm}
 			\begin{itemize}
 				\justifying
-				\item Ideally, the capabilities of a full-fledged OS should be available\\
-				on all IoT devices.
+				%\item Ideally, the capabilities of a full-fledged OS should be available on all IoT devices.
 				\item Native Multi-Threading
 				\item Hardware Abstraction
 				\item Dynamic Memory Management
@@ -1403,6 +1434,7 @@
 \end{frame}
 
 %------------------------------------------------
+\iffalse
 \begin{frame}
 	\frametitle{Event-Driven, Non-Blocking I/O Model}
 	\begin{columns}[c]
@@ -1418,7 +1450,7 @@
 	\vspace{.5cm}
 	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/io.png}
 \end{frame}
-
+\fi
 %------------------------------------------------
 \begin{frame}
 	\vspace{1cm}
