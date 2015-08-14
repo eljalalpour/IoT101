@@ -120,7 +120,7 @@
 					\item<2-> Introduction
 					\item<2-> IoT Requirements \& Challenges
 					\item<2-> IoT OS
-					\item<2-> Existing OSs				
+					\item<2-> Existing OSes				
 				\end{itemize}
 				\item Part II: IoT Protocol Stack
 				\begin{itemize}
@@ -155,7 +155,7 @@
 					\item Introduction
 					\item \textcolor{LightGray}{IoT Requirements \& Challenges}
 					\item \textcolor{LightGray}{IoT OS}
-					\item \textcolor{LightGray}{Existing OSs}
+					\item \textcolor{LightGray}{Existing OSes}
 				\end{itemize}
 				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
 				\item \textcolor{LightGray}{Part III: IoT Development}
@@ -249,7 +249,7 @@
 						\item[-] Effect of the requirements on OS
 					\end{itemize}
 					\item \textcolor{LightGray}{IoT OS}
-					\item \textcolor{LightGray}{Existing OSs}
+					\item \textcolor{LightGray}{Existing OSes}
 				\end{itemize}
 				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
 				\item \textcolor{LightGray}{Part III: IoT Development}
@@ -562,7 +562,7 @@
 						\item[-] What are the main requirements in IoT OS
 						\item[-] What are the main components in IoT OS
 				\end{itemize}
-					\item \textcolor{LightGray}{Existing OSs}
+					\item \textcolor{LightGray}{Existing OSes}
 				\end{itemize}
 				\item \textcolor{LightGray}{Part II: IoT Protocol Stack}
 				\item \textcolor{LightGray}{Part III: IoT Development}
@@ -641,11 +641,11 @@
 					\item \textcolor{LightGray}{Introduction}
 					\item \textcolor{LightGray}{IoT Requirements \& Challenges}
 					\item \textcolor{LightGray}{IoT OS}
-					\item {Existing OSs}
+					\item {Existing OSes}
 					\begin{itemize}
 						\item[-] OS Classification
-						\item[-] Overview of Open Source OSs
-						\item[-] Overview of Closed Source OSs
+						\item[-] Overview of Open Source OSes
+						\item[-] Overview of Closed Source OSes
 						\item[-] Why Not Linux?
 					\end{itemize}
 				\end{itemize}
@@ -688,7 +688,7 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Overview of Open Source OSs}
+	\frametitle{Overview of Open Source OSes}
 	\begin{columns}[c]
 		\begin{column}{30cm}
 			\vspace{.1cm}
@@ -712,11 +712,20 @@
 	\frametitle{FreeRTOS}
 	\begin{itemize}
 		\justifying
+		\item Owned, developed, maintained, distributed and supported by Real Time Engineers Ltd
+			\begin{itemize}
+				\item It claims that is market leading RTOS
+			\end{itemize}
 		\item FreeRTOS is designed to be \textcolor{TextOrange}{small}
 		and \textcolor{TextOrange}{simple}.
-		\item It claims that is market leading RTOS
+		\begin{itemize}
+			\item ROM/Flash footprint from 5K to 12K bytes
+			\item RAM footprint $\approx$ 250 bytes,
+		\end{itemize}
 		\item The kernel itself consists of only three or four C files.
-		\item It provides methods for multiple threads or tasks, mutexes, semaphores and software timers.
+		\begin{itemize}
+			\item It provides methods for multiple threads or tasks, mutexes, semaphores and software timers.		
+		\end{itemize}
 		\item Key features are \textcolor{TextGreen}{very small memory footprint},
 		\textcolor{TextGreen}{low overhead}, and \textcolor{TextGreen}{very fast execution}.
 	\end{itemize}
@@ -728,30 +737,25 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{RIOT}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
+	\begin{itemize}
+		\item Is an operating system for Internet of Things (IoT) devices.
+		\item RIOT is a \textcolor{TextOrange}{real-time} \textcolor{TextOrange}{multi-threading} operating system.
+		\item RIOT implements a \textcolor{TextGreen}{microkernel} architecture
+		\item RIOT is based on design objectives including:
+		\begin{itemize}
+			\item Energy-Efficiency
+			\item High degree of modularity
+			\item Reliability
+			\item Real-Time Capabilities
 			\begin{itemize}
-				\justifying
-				\item RIOT is a \textcolor{TextOrange}{real-time}
-				\textcolor{TextOrange}{multi-threading} operating system.
-				\item RIOT implements a \textcolor{TextGreen}{microkernel} architecture
-				\item RIOT is based on design objectives including:
-				\begin{itemize}
-					\justifying
-					\item Energy-Efficiency
-					\item Reliability
-					\item Real-Time Capabilities
-					\item Small Memory Footprint
-					\item Modularity
-					\item Uniform API Access\\
-					independent of the underlying hardware\\
-					(this API offers partial POSIX compliance)
-				\end{itemize}
+				\item[-] a preemptive, tickless scheduler with priorities
 			\end{itemize}
-		\end{column}
-	\end{columns}
-	\vspace{.25cm}
+			\item Small Memory Footprint
+			\item API independent of the HW (partial POSIX) + Wiselib support
+			\item Networking: IPv6, UDP, 6LoWPAN, ...
+		\end{itemize}
+	\end{itemize}
+	\vspace{.05cm}
 	\hspace*{7cm} \includegraphics[width=5cm]{figs/riot-logo.png}
 \end{frame}
 
@@ -783,18 +787,14 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{TinyOS}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item TinyOS is a \textcolor{TextOrange}{component-based} operating system and platform\\
-				targeting wireless sensor networks.
-				\item TinyOS is an embedded operating system written in the \textcolor{TextOrange}{nesC}\\
-				\textcolor{TextOrange}{programming language} as a set of cooperating tasks and processes.
-			\end{itemize}
-		\end{column}
-	\end{columns}
+	\begin{itemize}
+		\item TinyOS is a \textcolor{TextOrange}{component-based} operating system and platform targeting wireless sensor networks.
+		\begin{itemize}
+			\item Components are connected to each other using interfaces
+			\item Components for common abstractions such as packet communication, routing, sensing, actuation and storage
+		\end{itemize}
+		\item TinyOS is an embedded operating system written in the \textcolor{TextOrange}{nesC programming language} as a set of cooperating tasks and processes.
+	\end{itemize}
 	\vspace{.5cm}
 	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/tinyos-logo.jpg}
 \end{frame}
@@ -820,25 +820,19 @@
 %------------------------------------------------
 \begin{frame}
 	\frametitle{OpenWSN}
-	\begin{columns}[c]
-		\begin{column}{30cm}
-			\vspace{.1cm}
-			\begin{itemize}
-				\justifying
-				\item The goal of the OpenWSN project is to provide open-source\\
-				implementations of a complete protocol stack based on Internet of\\
-				Things standards, on a variety of software and hardware platforms.
-				\item Under-development protocols
+	\begin{itemize}
+		\item TProvides open-source implementations of a complete protocol stack based on Internet of Things standards, on a variety of software and hardware platforms.
+		\item Enables ultra-low power and highly reliable mesh networks which are fully integrated into the Internet
+		\item Protocols
 				\begin{itemize}
 					\item IEEE802.15.4e
 					\item IETF 6TiSCH 
 					\item IETF 6LoWPAN
 					\item IETF ROLL
+					\item RPL
+					\item ...
 				\end{itemize}
 			\end{itemize}
-		\end{column}
-	\end{columns}
-	\vspace{.5cm}
 	\hspace*{5.5cm} \includegraphics[width=4cm]{figs/openwsn-logo.png}
 \end{frame}
 
@@ -945,7 +939,7 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{Overview of Closed Source OSs}
+	\frametitle{Overview of Closed Source OSes}
 	\begin{columns}[c]
 		\begin{column}{30cm}
 			\vspace{.1cm}
@@ -1404,8 +1398,8 @@
 	\frametitle{Summary}
 	\begin{itemize}
 		\justifying
-		\item Different applications of IoT $\Rightarrow$ Different OS Requirements (e.g., Energy, Memory, Realtime, ...) $\Rightarrow$ Different OSs
-		\item A few OSs should be examined
+		\item Different applications of IoT $\Rightarrow$ Different OS Requirements (e.g., Energy, Memory, Realtime, ...) $\Rightarrow$ Different OSes
+		\item A few OSes should be examined
 		\item In the next step, we want to develop an evaluation environment and focus on RIOT 
 		\begin{itemize}
 			\item We have already enough experience on Linux 
