@@ -1,6 +1,8 @@
 # IoT-101
 ## Introduction
+
 ## Contributers
+
 ## References links
 ### Operating System of The IoT
 * http://micrium.com/iot
@@ -8,4 +10,4 @@
 * http://whatis.techtarget.com/definition/Internet-of-Things
 
 ## Useful links
-(Smart GreenHouse)[http://iot.eclipse.org/java/tutorial/]
+[Smart GreenHouse Tutorial](http://iot.eclipse.org/java/tutorial/)
