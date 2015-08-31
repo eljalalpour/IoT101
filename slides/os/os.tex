@@ -1260,8 +1260,7 @@
 		needed for command purposes and monitoring feedback.
 		\item Nodes' Operating Systems
 		\begin{itemize}
-			\item Contiki
-			\item RIOT
+			\item RIOT, Contiki, FreeRTOS, TinyOS, Linux
 		\end{itemize}
 	\end{itemize}
 	\vspace{.5cm}
@@ -1283,22 +1282,29 @@
 
 %------------------------------------------------
 \begin{frame}
-	\frametitle{The ``IoT-Lab" Experiments}
+	\frametitle{The ``IoT-Lab" Experiments Steps}
 	\vspace{.1cm}
 	\begin{itemize}
-		\item you can setup an experiment in
-		\href{http://iot-lab.info}{\textcolor{blue}{``IoT-Lab" website}} with following
-		features:
-		\begin{itemize}
-			\item Experiment duration
-			\item Node Architecture
-			\item Node Host Lab
-			\item Node numbers
-		\end{itemize}
-		\item Later you can setup test profile and upload your framework for your specific node.
+		\item Build application
+			\begin{itemize}
+				\item Build one or several firmwares to use during experiment for WSN430, M3 or A8 hardware platform.			
+			\end{itemize}
+		\item Select resources
+			\begin{itemize}
+				\item Choose number and type of nodes or choose a specific topology.			
+			\end{itemize}
+		\item Configure nodes
+			\begin{itemize}
+				\item Associate a firmware to each node and define the activity of the control node during the experiment
+			\end{itemize}
+		\item Submit your experiment
+			\begin{itemize}
+				\item A scheduler will program experiment, immediately if resources are free. 
+					\begin{itemize}
+						\item[-] The deployment will be automatic.	
+					\end{itemize}					 			
+			\end{itemize}			
 	\end{itemize}
-	\vspace{.5cm}
-	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/iot-lab-3.png}
 \end{frame}
 
 %------------------------------------------------
@@ -1523,6 +1529,26 @@
 			\end{itemize}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+	\frametitle{The ``IoT-Lab" Experiments}
+	\vspace{.1cm}
+	\begin{itemize}
+		\item you can setup an experiment in
+		\href{http://iot-lab.info}{\textcolor{blue}{``IoT-Lab" website}} with following
+		features:
+		\begin{itemize}
+			\item Experiment duration
+			\item Node Architecture
+			\item Node Host Lab
+			\item Node numbers
+		\end{itemize}
+		\item Later you can setup test profile and upload your framework for your specific node.
+	\end{itemize}
+	\vspace{.5cm}
+	\hspace*{5.5cm} \includegraphics[width=5cm]{figs/iot-lab-3.png}
 \end{frame}
 
 \end{document}
