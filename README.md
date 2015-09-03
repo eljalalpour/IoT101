@@ -1,10 +1,12 @@
 # IoT-101
 ## Introduction
 In this repository we provide slides and informations about IoT and it's operating systems. we want to use this informations in order to implement a building management system in [Department of Computer Engineering and Information Technology](http://ceit.aut.ac.ir/) of [Amirkabir University of Technology](http://aut.ac.ir/).
+
 ## Contributers
 * [Prof. Bahador Bakhshi](http://ceit.aut.ac.ir/~bakhshis)
 * [Elahe Jalalpour](http://ceit.aut.ac.ir/~jalalpour)
 * [Parham Alvani](https://1995parham.github.io)
+
 ## References links
 ### Operating System of The IoT
 * [IoT for Embedded Systems: The New Industrial Revolution](http://micrium.com/iot)
